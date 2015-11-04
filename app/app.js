@@ -1,4 +1,4 @@
 (function (){
 	"use strict";
-	angular.module('app',['common.services']);
+	angular.module('app',['common.services','productResourceMock']);
 })();
