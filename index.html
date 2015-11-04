@@ -3,39 +3,57 @@
 <head>
 	<title>Product Management</title>
 
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+
 	<!-- Library Scripts -->
 	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+	
+	<!-- Source Files -->
 	<script src="app/app.js"></script>
 	<script src="app/products/ProductList.controller.js"></script>
+	<script src="app/common/services/common.services.js"></script>
+
 </head>
 <body ng-app="app">
 
-	<table ng-controller="ProductList as vm">
-		<thead>
-			<tr>
-				<td>
-				<button type="button" ng-click="vm.toggleImage()">
-				{{vm.showImage ? "Hide" : "Show"}} Image
-				</button></td>
-				<td>Product</td>
-				<td>Code</td>
-				<td>Available</td>
-				<td>Price</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="p in vm.products">
-				<td>
-					<img ng-if="vm.showImage" style="width:50px; margin:2px" ng-src="{{p.imageUrl}}"
-						title="{{p.productName}}">
-				</td>
-				<td>{{p.productName}}</td>
-				<td>{{p.productCode}}</td>
-				<td>{{p.releaseDate}}</td>
-				<td>{{p.price | currency }}</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="panel panel-primary">
+		<div class="panel-heading">Product List</div>
 
-</body>
-</html>
+		<div class="panel-body">
+		<table class="table" ng-controller="ProductList as vm">
+				<thead>
+					<tr>
+						<td>
+							<button class="btn btn-primary" type="button" ng-click="vm.toggleImage()">
+								{{vm.showImage ? "Hide" : "Show"}} Image
+							</button></td>
+							<td>Product</td>
+							<td>Code</td>
+							<td>Available</td>
+							<td>Price</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="p in vm.products">
+							<td>
+								<img ng-if="vm.showImage" style="width:50px; margin:2px" ng-src="{{p.imageUrl}}"
+								title="{{p.productName}}">
+							</td>
+							<td>{{p.productName}}</td>
+							<td>{{p.productCode}}</td>
+							<td>{{p.releaseDate}}</td>
+							<td>{{p.price | currency }}</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+
+		</div>
+
+
+
+	</body>
+	</html>
