@@ -1,5 +1,5 @@
 (function () {
-
+	"use strict";
 	angular.module("app")
 	.controller("ProductList", [ProductList]);
 
@@ -7,7 +7,13 @@
 		
 		var vm = this;
 		
+		vm.showImage = false;
 		vm.products = getProducts();
+		vm.toggleImage = toggleImage;
+
+		function toggleImage() {
+			vm.showImage = !vm.showImage;
+		}
 
 		function getProducts() {
 			return [
