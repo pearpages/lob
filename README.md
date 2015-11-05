@@ -13,8 +13,11 @@ $httpBackend.whenPOST
 
 ##bootstrap
 
-btn btn-primary
-panel panel-primary
-    panel-header
-    panel-body
+div.container
+button.btn.btn-primary
+div.panel.panel-primary>div.panel-header+div.panel-body
 
+## Ui-Route
+
++ Call $state.go('productList')
++ Click a link a[ui-sref="productList"]

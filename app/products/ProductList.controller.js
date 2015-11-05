@@ -1,9 +1,9 @@
 (function () {
 	"use strict";
 	angular.module("app")
-	.controller("ProductList", ['productResource',ProductList]);
+	.controller("ProductListController", ['productResource',ProductListController]);
 
-	function ProductList(productResource){
+	function ProductListController(productResource){
 		
 		var vm = this;
 		
