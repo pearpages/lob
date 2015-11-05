@@ -10,7 +10,8 @@ button[type="button"] (button,submit,reset)
 Min-Safe Array (.factory("productResource",['$resource',productResource]))
 $httpBackend.whenGET
 $httpBackend.whenPOST
-
+| number:0
+| date
 ##bootstrap
 
 div.container

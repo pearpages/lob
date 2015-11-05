@@ -13,6 +13,7 @@
 						<td>Code</td>
 						<td>Available</td>
 						<td>Price</td>
+						<td>&nbsp;</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -21,10 +22,13 @@
 							<img ng-if="vm.showImage" style="width:50px; margin:2px" ng-src="{{p.imageUrl}}"
 							title="{{p.productName}}">
 						</td>
-						<td>{{p.productName}}</td>
+						<td><a ui-sref="productDetail({productId: p.productId})">{{p.productName}}</a></td>
 						<td>{{p.productCode}}</td>
 						<td>{{p.releaseDate}}</td>
 						<td>{{p.price | currency }}</td>
+						<td>
+							<a ui-sref="productEdit({productId: p.productId})" class="btn btn-primary"> Edit</a>
+						</td>
 					</tr>
 				</tbody>
 			</table>	
