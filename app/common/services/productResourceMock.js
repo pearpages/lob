@@ -20,7 +20,7 @@
 		},
 		{
 			"productId" : 2,
-			"productName": "Leaf Rake",
+			"productName": "A Leaf Rake",
 			"productCode": "GDN-0011",			
 			"releaseDate": "March 19, 2009",
 			"description": "Leaf rake with 48-inch handle.",
@@ -32,7 +32,7 @@
 		},
 		{
 			"productId" : 3,
-			"productName": "Leaf Rake",
+			"productName": "B Leaf Rake",
 			"productCode": "GDN-0011",			
 			"releaseDate": "March 19, 2009",
 			"description": "Leaf rake with 48-inch handle.",
@@ -44,7 +44,7 @@
 		},
 		{
 			"productId" : 4,
-			"productName": "Leaf Rake",
+			"productName": "C Leaf Rake",
 			"productCode": "GDN-0011",			
 			"releaseDate": "March 19, 2009",
 			"description": "Leaf rake with 48-inch handle.",
@@ -56,7 +56,7 @@
 		},
 		{
 			"productId" : 5,
-			"productName": "Leaf Rake",
+			"productName": "D Leaf Rake",
 			"productCode": "GDN-0011",			
 			"releaseDate": "March 19, 2009",
 			"description": "Leaf rake with 48-inch handle.",
@@ -68,7 +68,7 @@
 		},
 		{
 			"productId" : 6,
-			"productName": "Leaf Rake",
+			"productName": "E Leaf Rake",
 			"productCode": "GDN-0011",			
 			"releaseDate": "March 19, 2009",
 			"description": "Leaf rake with 48-inch handle.",
@@ -102,6 +102,9 @@
 		});
 
 		$httpBackend.whenPOST(productUrl).respond(function (method,url,data){
+
+			console.log(data);
+
 			var product = angular.fromJson(data);
 
 			if(!product.productId){

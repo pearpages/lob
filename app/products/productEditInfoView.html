@@ -32,5 +32,16 @@
 				<textarea class="form-control" id="inputDescription" placeholder="Description" rows="3" ng-model="vm.product.description"></textarea>
 			</div>
 		</div>
+
+		<div class="form-group">
+			<div class="col-md-4 col-md-offset-2">
+				<span>
+					<button class="btn btn-primary" ng-click="vm.submit()">Save</button>
+				</span>
+				<span>
+					<button class="btn btn-default" ng-click="vm.cancel()">Cancel</button>
+				</span>
+			</div>
+		</div>
 	</fieldset>
 </form>
