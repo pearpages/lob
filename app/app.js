@@ -1,7 +1,7 @@
 (function (){
 	"use strict";
 	angular
-	.module('app',['common.services','ui.router','productResourceMock'])
+	.module('app',['common.services','ui.router','productResourceMock','ui.mask'])
 	.config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
 		$stateProvider
 		.state('home',{
