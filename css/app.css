@@ -2,6 +2,10 @@ body{
 	background-color: #C6D9F1;
 }
 
+div.edit-info{
+	padding-top:20px;
+}
+
 .wizard a{
 	background: #efefef;
 	display: inline-block;
@@ -15,4 +19,19 @@ body{
 .wizard .active{
 	background: #007ACC;
 	color: #fff;
+}
+
+form{
+	background-color: #A4C8E8;
+	border-radius:2px;
+	box-shadow: 0 1px 1px #CCC;
+	color: #404040;
+	font-size: 16px;
+	padding: 30px 20 px;
+}
+form legend{
+	color: #404040;
+	font-size: 42px;
+	line-height: 1;
+	text-shadow: 0 3px 0 rgba(0,0,0,0.1);
 }

@@ -4,6 +4,7 @@
 		.controller('ProductEditController',['product',ProductEditController]);
 
 	function ProductEditController(product) {
+		//product gets populated in the resolve in the app.js
 		var vm = this;
 
 		vm.product = product;
