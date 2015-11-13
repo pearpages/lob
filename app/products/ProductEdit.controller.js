@@ -9,10 +9,19 @@
 
 		vm.product = product;
 
+		vm.open = open;
+
 		if(vm.product && vm.product.productId){
 			vm.title = 'Edit: ' + vm.product.productName;
 		}else{
 			vm.title = "New Product";
+		}
+
+		function open($event) {
+			$event.preventDefault();
+			$event.stopPropagation();
+
+			vm.opened = !vm.opened;
 		}
 	}	
 })();

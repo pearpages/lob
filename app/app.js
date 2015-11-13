@@ -6,7 +6,7 @@
 		'ui.router',
 		'productResourceMock',
 		'ui.mask',
-		'ui.bootstrap.datepicker'])
+		'ui.bootstrap'])
 	.config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
 		$stateProvider
 		.state('home',{
