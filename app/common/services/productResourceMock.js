@@ -103,8 +103,6 @@
 
 		$httpBackend.whenPOST(productUrl).respond(function (method,url,data){
 
-			console.log(data);
-
 			var product = angular.fromJson(data);
 
 			if(!product.productId){
@@ -116,7 +114,7 @@
 				//updated product
 				for (var i = 0; i < products.length; i++) {
 					if(products[i].productId == product.productId){
-						product[i] = product;
+						products[i] = product;
 						break;
 					}
 				};
