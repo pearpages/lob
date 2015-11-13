@@ -1,7 +1,12 @@
 (function (){
 	"use strict";
 	angular
-	.module('app',['common.services','ui.router','productResourceMock','ui.mask'])
+	.module('app',[
+		'common.services',
+		'ui.router',
+		'productResourceMock',
+		'ui.mask',
+		'ui.bootstrap.datepicker'])
 	.config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
 		$stateProvider
 		.state('home',{
