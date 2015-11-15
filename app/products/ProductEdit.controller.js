@@ -33,7 +33,9 @@
 		}
 
 		function submit() {
-			vm.product.$save();
+			vm.product.$save(function (data){
+				toastr.success("Save Successful");
+			});
 		}
 
 		function cancel() {
