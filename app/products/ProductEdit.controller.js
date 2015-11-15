@@ -1,9 +1,9 @@
 (function () {
 	angular
 	.module('app')
-	.controller('ProductEditController',['product','$state',ProductEditController]);
+	.controller('ProductEditController',['product','$state','productsService',ProductEditController]);
 
-	function ProductEditController(product, $state) {
+	function ProductEditController(product, $state,productsService) {
 		//product gets populated in the resolve in the app.js
 		var vm = this;
 
@@ -13,6 +13,9 @@
 		vm.cancel = cancel;
 		vm.addTags = addTags;
 		vm.removeTag = removeTag;
+		vm.priceOption = 'percent';
+		vm.marginPercent = calculateMarginPercent;
+		vm.calculatePrice = calculatePrice;
 
 		activate();
 
@@ -24,6 +27,21 @@
 			}	
 		}
 		
+		function calculateMarginPercent() {
+			return productsService.calculateMarginPercent(vm.product.price,vm.product.cost);
+		}
+
+		function calculatePrice () {
+			var price = 0;
+
+			if(vm.priceOption == 'amount'){
+				price = productsService.calculatePriceFromAmount(vm.product.cost,vm.markupAmount);
+			}else if(vm.priceOption == 'percent'){
+				price = productsService.calculatePriceFromPercent(vm.product.cost,vm.markupPercent);
+			}
+
+			vm.product.price = price;
+		}
 
 		function open($event) {
 			$event.preventDefault();
