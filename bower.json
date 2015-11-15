@@ -23,6 +23,7 @@
     "bootstrap": "~3.3.5",
     "angular-ui-utils": "ui-utils#~3.0.0",
     "angular-bootstrap": "~0.14.3",
-    "toastr": "~2.1.2"
+    "toastr": "~2.1.2",
+    "angular-messages": "~1.4.7"
   }
 }
