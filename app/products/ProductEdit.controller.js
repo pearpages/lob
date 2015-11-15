@@ -32,10 +32,14 @@
 			vm.opened = !vm.opened;
 		}
 
-		function submit() {
-			vm.product.$save(function (data){
-				toastr.success("Save Successful");
-			});
+		function submit(isValid) {
+			if(isValid){
+				vm.product.$save(function (data){
+					toastr.success("Save Successful");
+				});
+			}else{
+				alert('Please correct the validation errors first.');
+			}
 		}
 
 		function cancel() {
