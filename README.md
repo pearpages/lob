@@ -29,7 +29,9 @@
 
 ##bootstrap
 
-+ div.container
-+ button.btn.btn-primary
-+ div.panel.panel-primary>div.panel-header+div.panel-body
-+ button[type="button"] (button,submit,reset)
+```
+div.container
+button.btn.btn-primary
+div.panel.panel-primary>div.panel-header+div.panel-body
+button[type="button"] (button,submit,reset)
+```
